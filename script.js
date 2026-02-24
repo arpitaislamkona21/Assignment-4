@@ -36,20 +36,20 @@ function renderJobs() {
     card.innerHTML = `
       <div class="flex justify-between items-start">
         <div>
-          <h3 class="font-semibold">${job.company}</h3>
-          <p class="text-xs text-gray-500">${job.position}</p>
+          <h3 class="font-bold">${job.company}</h3>
+          <p class="text-xs font-bold py-2 text-gray-500">${job.position}</p>
           ${job.location} • ${job.type} • ${job.salary}
         </div>
         <button onclick="deleteJob(${job.id})" class="text-gray-400">✖</button>
       </div>
 
-      <p class="text-xs mt-2  text-gray-600"><span class="inline-block mt-2 text-xs bg-[#EEF4FF] font-bold px-2 py-1 rounded">
+      <p class="text-xs mt-2 py-2text-gray-600"><span class="inline-block mt-2  text-xs bg-[#EEF4FF] font-semibold px-2 py-1 rounded">
         ${job.status === "all" ? "NOT APPLIED" : job.status.toUpperCase()}
-      </span> </br> ${job.description}</p>
+      </span> </br></br> ${job.description}</p>
 
       
 
-      <div class="flex gap-2 mt-3">
+      <div class="flex gap-2 font-bold mt-3">
         <button onclick="updateStatus(${job.id}, 'interview')" 
           class="border border-green-500 text-green-600 px-3 py-1 rounded text-xs">
           Interview
