@@ -14,25 +14,28 @@
 
   <!-- Title -->
   <h1 class="text-xl font-bold mb-6">Job Application Tracker</h1>
+<!-- Dashboard Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
 
-  <!-- Dashboard Cards -->
-  <div class="grid grid-cols-3 gap-4 mb-8">
-
-    <div class="bg-gray-50 p-4 rounded">
-      <p class="text-sm text-gray-500">Total</p>
-      <p id="totalCount" class="text-lg font-bold">8</p>
-    </div>
-
-    <div class="bg-gray-50 p-4 rounded">
-      <p class="text-sm text-gray-500">Interview</p>
-      <p id="interviewCount" class="text-green-600 font-bold">0</p>
-    </div>
-
-    <div class="bg-gray-50 p-4 rounded">
-      <p class="text-sm text-gray-500">Rejected</p>
-      <p id="rejectedCount" class="text-red-600 font-bold">0</p>
-    </div>
-
+      <div class="bg-gray-50 p-4 rounded shadow">
+         <p class="text-sm text-gray-500">Total</p>
+       <p id="totalCount" class="text-lg font-bold">8</p>
   </div>
 
- 
+  <div class="bg-gray-50 p-4 rounded shadow">
+     <p class="text-sm text-gray-500">Interview</p>
+    <p id="interviewCount" class="text-green-600 font-bold">0</p>
+  </div>
+
+  <div class="bg-gray-50 p-4 rounded shadow">
+    <p class="text-sm text-gray-500">Rejected</p>
+     <p id="rejectedCount" class="text-red-600 font-bold">0</p>
+  </div>
+
+</div>
+
+<!-- Available Jobs Header -->
+  <div class="flex justify-between items-center mb-3">
+    <h2 class="text-sm font-semibold">Available Jobs</h2>
+    <p id="tabCount" class="text-xs text-gray-500">8 jobs</p>
+  </div>
