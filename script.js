@@ -43,11 +43,11 @@ function renderJobs() {
         <button onclick="deleteJob(${job.id})" class="text-gray-400">✖</button>
       </div>
 
-      <p class="text-xs mt-2 text-gray-600">${job.description}</p>
-
-      <span class="inline-block mt-2 text-xs bg-gray-100 px-2 py-1 rounded">
+      <p class="text-xs mt-2  text-gray-600"><span class="inline-block mt-2 text-xs bg-[#EEF4FF] font-bold px-2 py-1 rounded">
         ${job.status === "all" ? "NOT APPLIED" : job.status.toUpperCase()}
-      </span>
+      </span> </br> ${job.description}</p>
+
+      
 
       <div class="flex gap-2 mt-3">
         <button onclick="updateStatus(${job.id}, 'interview')" 
@@ -67,21 +67,6 @@ function renderJobs() {
 
   updateDashboard();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function updateStatus(id, status){
   const job = jobs.find(j => j.id === id);
 
