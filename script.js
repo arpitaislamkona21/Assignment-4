@@ -48,7 +48,7 @@ card.innerHTML = `
 
 
 
-     <p class="text-xs mt-2 py-2text-gray-600"><span class="inline-block mt-2  text-xs bg-[#EEF4FF] font-bold px-2 py-1 rounded">
+     <p class="text-xs mt-2 py-2 text-gray-600"><span class="inline-block mt-2  text-xs bg-[#EEF4FF] font-bold px-4 py-2 rounded">
         ${job.status === "all" ? "NOT APPLIED" : job.status.toUpperCase()}
       </span> </br></br> ${job.description}</p>
 
