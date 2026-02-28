@@ -38,7 +38,7 @@ card.innerHTML = `
     <div class="flex justify-between items-start">
         <div>
             <h3 class="text-xl font-bold">${job.company}</h3>
-            <p class="text-xl font-regular py-2 text-gray-500">${job.position}</p>
+            <p class="text-base font-regular py-2 text-gray-500">${job.position}</p>
             <p class="text-base font-regular py-2 text-gray-500"> ${job.location} • ${job.type} • ${job.salary}</p>
         </div>
         <button onclick="deleteJob(${job.id})" class="text-gray-400 hover:text-red-500 delete-btn">
