@@ -33,35 +33,39 @@ function renderJobs() {
     const card = document.createElement("div");
     card.className = "border rounded p-4 text-sm";
 
-    card.innerHTML = `
-      <div class="flex justify-between items-start">
+    
+card.innerHTML = `
+    <div class="flex justify-between items-start">
         <div>
-          <h3 class="font-bold">${job.company}</h3>
-          <p class="text-xs font-bold py-2 text-gray-500">${job.position}</p>
-          ${job.location} • ${job.type} • ${job.salary}
+            <h3 class="text-xl font-bold">${job.company}</h3>
+            <p class="text-xl font-regular py-2 text-gray-500">${job.position}</p>
+            <p class="text-base font-regular py-2 text-gray-500"> ${job.location} • ${job.type} • ${job.salary}</p>
         </div>
-        <button onclick="deleteJob(${job.id})" class="text-gray-400">✖</button>
-      </div>
+        <button onclick="deleteJob(${job.id})" class="text-gray-400 hover:text-red-500 delete-btn">
+            <i class="fa-regular fa-trash-can"></i>
+        </button>
+    </div>
 
-      <p class="text-xs mt-2 py-2text-gray-600"><span class="inline-block mt-2  text-xs bg-[#EEF4FF] font-semibold px-2 py-1 rounded">
+
+
+     <p class="text-xs mt-2 py-2text-gray-600"><span class="inline-block mt-2  text-xs bg-[#EEF4FF] font-bold px-2 py-1 rounded">
         ${job.status === "all" ? "NOT APPLIED" : job.status.toUpperCase()}
       </span> </br></br> ${job.description}</p>
 
       
 
-      <div class="flex gap-2 font-bold mt-3">
-        <button onclick="updateStatus(${job.id}, 'interview')" 
-          class="border border-green-500 text-green-600 px-3 py-1 rounded text-xs">
-          Interview
+     <div class="flex gap-2 font-bold mt-3">
+     <button onclick="updateStatus(${job.id}, 'interview')" 
+       class="border border-green-500 text-green-600 px-3 py-1 rounded text-xs">
+         Interview
         </button>
 
         <button onclick="updateStatus(${job.id}, 'rejected')" 
-          class="border border-red-500 text-red-600 px-3 py-1 rounded text-xs">
-          Rejected
-        </button>
-      </div>
+     class="border border-red-500 text-red-600 px-3 py-1 rounded text-xs">
+        Rejected
+       </button>
+    </div>
     `;
-
     container.appendChild(card);
   });
 
